@@ -13,5 +13,7 @@ All content lives in the settings block at the top of the `<script>` in `index.h
 Everything in `assets/` is referenced by relative path, so keep the folder next to `index.html`.
 Swap a photo by replacing the file with one of the same name, or change the `src` in `index.html`.
 
+`assets/web/` holds resized, compressed copies of the large originals (the page loads these, not the originals). If you replace an original, regenerate its web copy, e.g. `sips -s format jpeg -s formatOptions 75 -Z 1000 assets/camp.jpeg --out assets/web/camp.jpg`.
+
 ## Preview locally
 Open `index.html` in a browser, or run `python3 -m http.server` in this folder and visit http://localhost:8000
