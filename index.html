@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>#HoopStudy Summer Camps · DJ Sackmann</title>
+<meta name="description" content="Point Guard, Elite and Girls camps with NBA/WNBA skills coach DJ Sackmann. First 100 sign-ups get $100 off — text Cassels.">
+<link rel="icon" href="https://storage.googleapis.com/msgsndr/sVakBIzA3mLR4AoGtZRE/media/678dd2cb671b4d5429f26bb8.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=DM+Sans:opsz,wght@9..40,400..800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --ink:#0B1B33;
+  --muted:#66748A;
+  --line:#E2E8F0;
+  --blue:#3A86FF;            /* HoopStudy brand blue */
+  --blue-ink:#1A63E0;
+  --sky:#8DB8FF;
+  --navy:#0A1A36;
+  --navy2:#112852;
+  --deep:#06112A;
+  --paper:#F4F6FA;
+  --tint:#EAF2FF;
+  --display:"Archivo","Arial Black",sans-serif;
+  --body:"DM Sans",system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);font-size:17px;line-height:1.55;background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:8px}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+
+/* ---------- Type ---------- */
+h1,h2,h3,.big{font-family:var(--display);font-stretch:120%;font-variation-settings:"wdth" 120;font-weight:900;letter-spacing:-.03em;line-height:.95;text-transform:uppercase}
+h1{font-size:clamp(44px,7.2vw,112px)}
+h2{font-size:clamp(36px,5.6vw,84px)}
+h3{font-size:clamp(20px,1.8vw,26px);line-height:1.05}
+.blue{color:var(--blue)}
+.sky{color:var(--sky)}
+.out{-webkit-text-stroke:2px currentColor;color:transparent}
+.kick{display:inline-flex;gap:10px;align-items:center;font-weight:800;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
+.kick::before{content:"";width:28px;height:2px;background:currentColor}
+.dark .kick{color:var(--sky)}
+p.short{font-size:19px;color:var(--muted);max-width:520px;margin-top:18px}
+.dark{background:var(--navy);color:#fff}
+.dark p.short{color:#C3CEE0}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:60px;padding:0 32px;border-radius:999px;background:var(--blue);color:#fff;font-weight:800;letter-spacing:.02em;box-shadow:0 18px 40px -14px rgba(58,134,255,.85);transition:transform .15s, background .2s;white-space:nowrap}
+.btn:hover{background:var(--blue-ink)}
+.btn:active{transform:scale(.98)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.line{background:transparent;border:2px solid rgba(255,255,255,.5);box-shadow:none;color:#fff}
+.btn.line:hover{background:rgba(255,255,255,.1)}
+.btn.ink{background:transparent;border:2px solid var(--line);box-shadow:none;color:var(--ink)}
+.btn.ink:hover{border-color:var(--ink)}
+.btn .sub{font-weight:600;opacity:.8;font-size:13px}
+
+/* ---------- Offer bar ---------- */
+.offer{background:var(--deep);color:#C3CEE0;font-size:14px;font-weight:600;position:relative;z-index:6}
+.offer .wrap{display:flex;align-items:center;justify-content:center;gap:16px;min-height:42px;flex-wrap:wrap;padding:6px 0;text-align:center}
+.offer b{color:#fff}
+.offer .pill{background:var(--blue);color:#fff;padding:3px 10px;border-radius:999px;font-weight:800;letter-spacing:.06em;font-size:12px;text-transform:uppercase}
+.offer a{color:#fff;font-weight:800;text-decoration:underline;text-decoration-color:var(--blue);text-underline-offset:4px}
+.offer .meter{display:inline-flex;align-items:center;gap:8px;font-size:12px}
+.offer .track{width:90px;height:6px;border-radius:6px;background:rgba(255,255,255,.15);overflow:hidden}
+.offer .fill{display:block;height:100%;background:var(--blue)}
+
+/* ---------- Nav (over hero, turns solid on scroll) ---------- */
+.nav{position:sticky;top:0;z-index:30;height:0}
+.nav .bar{position:absolute;left:0;right:0;top:0;padding:20px 0;transition:background .3s, padding .3s, box-shadow .3s}
+.nav.solid .bar{background:rgba(10,26,54,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:12px 0;box-shadow:0 10px 30px -20px rgba(0,0,0,.6)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.nav .brand img{height:30px;width:auto}
+.nav-links{display:flex;gap:30px;font-weight:700;font-size:15px;color:#DCE5F3}
+.nav-links a:hover{color:#fff}
+.nav .btn{height:46px;padding:0 22px;font-size:15px}
+@media(max-width:900px){.nav-links{display:none}.nav .brand img{height:24px}.nav .btn{height:42px;padding:0 16px;font-size:14px}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;color:#fff;padding:130px 0 72px;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(assets/dj-coaching.jpg) 60% 25%/cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,26,54,.45) 0%,rgba(10,26,54,.62) 45%,rgba(10,26,54,.97) 100%),linear-gradient(90deg,rgba(10,26,54,.75) 0%,rgba(10,26,54,0) 60%)}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:44px;align-items:end}
+@media(min-width:1000px){.hero .wrap{grid-template-columns:1.15fr .85fr}}
+.hero p.sub{font-size:clamp(18px,1.6vw,22px);max-width:560px;margin:22px 0 28px;color:#DCE5F3}
+.switch{display:inline-grid;grid-template-columns:repeat(3,auto);gap:6px;padding:6px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);margin-bottom:26px;max-width:100%}
+.switch button{padding:12px 20px;border-radius:999px;font-weight:800;font-size:15px;color:#DCE5F3;transition:background .2s,color .2s;line-height:1.15;text-align:center}
+.switch button small{display:block;font-size:11.5px;font-weight:600;opacity:.75;letter-spacing:.02em}
+.switch button:hover{color:#fff}
+.switch button[aria-selected="true"]{background:#fff;color:var(--ink)}
+.switch button[aria-selected="true"] small{color:var(--blue);opacity:1}
+@media(max-width:520px){.switch{display:grid;width:100%;border-radius:22px}.switch button{padding:10px 6px;font-size:14px;border-radius:16px}}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.chips span{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px}
+
+/* VSL card */
+.vsl{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:16/10;background:#000;border:6px solid rgba(255,255,255,.14);box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.vsl img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;transition:transform .6s}
+.vsl:hover img{transform:scale(1.04)}
+.vsl .play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,rgba(10,26,54,.1) 30%,rgba(10,26,54,.85))}
+.play-dot{width:86px;height:86px;border-radius:50%;background:var(--blue);display:grid;place-items:center;animation:pulse 2.2s infinite}
+.play-dot svg{width:28px;height:28px;margin-left:5px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(58,134,255,.6)}70%{box-shadow:0 0 0 24px rgba(58,134,255,0)}100%{box-shadow:0 0 0 0 rgba(58,134,255,0)}}
+.vsl .cap{position:absolute;left:20px;right:20px;bottom:16px;display:flex;justify-content:space-between;align-items:end;gap:12px;pointer-events:none;font-size:14px;color:#DCE5F3}
+.vsl .cap b{display:block;font-family:var(--display);font-stretch:120%;font-variation-settings:"wdth" 120;font-weight:900;text-transform:uppercase;font-size:22px;color:#fff;letter-spacing:-.02em;line-height:1}
+.vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ---------- Marquee band ---------- */
+.marq{background:var(--blue);color:#fff;overflow:hidden;white-space:nowrap;padding:18px 0}
+.marq .track{display:inline-flex;animation:marq 34s linear infinite}
+.marq div.seg{font-family:var(--display);font-weight:900;font-stretch:120%;font-variation-settings:"wdth" 120;font-size:26px;text-transform:uppercase;letter-spacing:-.01em}
+.marq span{margin:0 26px;opacity:.55}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- Sections ---------- */
+section{padding:110px 0}
+@media(max-width:800px){section{padding:72px 0}}
+.head{display:grid;gap:24px;margin-bottom:50px}
+@media(min-width:900px){.head.split{grid-template-columns:1.2fr .8fr;align-items:end}}
+.head p.short{margin-top:0}
+
+/* ---------- Dates ---------- */
+.dates{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:18px}
+.date{position:relative;display:grid;grid-template-columns:140px 1fr;text-align:left;border-radius:22px;background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:0 14px 30px -22px rgba(11,27,51,.5);transition:transform .2s, box-shadow .2s, border-color .2s;animation:rise .45s both}
+.date:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 30px 50px -28px rgba(58,134,255,.7)}
+.date .stub{background:var(--navy) url(https://files.leadconnectorhq.com/file/6afe779a306ac23751f16795/texture-1.jpg) center/cover;color:#fff;padding:20px 16px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.date .mon{font-weight:800;font-size:12px;letter-spacing:.2em;color:var(--sky)}
+.date .days{font-family:var(--display);font-stretch:120%;font-variation-settings:"wdth" 120;font-weight:900;font-size:34px;line-height:.9;letter-spacing:-.04em;white-space:nowrap}
+.date .yr{font-weight:700;font-size:12px;color:#8FA0B8}
+.date .info{padding:20px;display:flex;flex-direction:column;gap:3px}
+.date .t1{font-weight:800;font-size:18px}
+.date .t2{color:var(--muted);font-size:15px}
+.date .foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px}
+.status{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--tint);color:var(--blue-ink)}
+.status.waitlist{background:var(--paper);color:var(--muted)}
+.date .go{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:14px;color:var(--blue)}
+.date .go svg{width:16px;height:16px;transition:transform .2s}
+.date:hover .go svg{transform:translateX(4px)}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
+@media(max-width:520px){.date{grid-template-columns:122px 1fr}.date .stub{padding:18px 12px}.date .days{font-size:28px}.date .info{padding:18px 16px}.date .t2{font-size:14px}}
+.note{margin-top:22px;display:flex;gap:12px;align-items:center;color:var(--muted);font-weight:500}
+.note i{width:30px;height:30px;border-radius:50%;background:var(--tint);color:var(--blue);display:grid;place-items:center;font-style:normal;font-weight:900;flex:none}
+
+/* ---------- Stat band ---------- */
+.band{background:var(--navy) url(https://files.leadconnectorhq.com/file/6afe779a306ac23751f16795/texture-1.jpg) center/cover;color:#fff;padding:70px 0}
+.band .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.band .n{font-family:var(--display);font-weight:900;font-stretch:120%;font-variation-settings:"wdth" 120;font-size:clamp(40px,5vw,72px);line-height:1;letter-spacing:-.03em}
+.band .n em{color:var(--blue);font-style:normal}
+.band p{color:#B8C4D9;font-weight:600;margin-top:8px}
+@media(max-width:900px){.band .wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 18px}.band .n{font-size:clamp(30px,8.4vw,56px)}.band p{font-size:14px}}
+
+/* ---------- Week (dark) ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative;margin-bottom:46px}
+.steps::before{content:"";position:absolute;top:28px;left:28px;right:28px;height:2px;background:linear-gradient(90deg,var(--blue),rgba(141,184,255,.25))}
+.step{position:relative;text-align:left;padding-right:16px;opacity:.6;transition:opacity .2s}
+.step:hover,.step[aria-selected="true"]{opacity:1}
+.step b{width:58px;height:58px;border-radius:50%;background:var(--navy2);border:2px solid var(--blue);color:#fff;display:grid;place-items:center;font-family:var(--display);font-stretch:120%;font-weight:900;font-size:19px;margin-bottom:18px;box-shadow:0 0 0 8px var(--navy);transition:background .2s}
+.step[aria-selected="true"] b{background:var(--blue)}
+.step .d{display:block;color:var(--sky);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:12px;margin-bottom:6px}
+.step .t{display:block;font-family:var(--display);font-stretch:120%;font-variation-settings:"wdth" 120;font-weight:900;text-transform:uppercase;font-size:clamp(15px,1.6vw,22px);line-height:1.02;letter-spacing:-.02em}
+@media(max-width:700px){
+  .steps::before{left:22px;right:22px;top:22px}
+  .step{padding-right:6px}
+  .step b{width:44px;height:44px;font-size:15px;margin-bottom:12px;box-shadow:0 0 0 6px var(--navy)}
+  .step .d{font-size:10.5px;letter-spacing:.1em}
+  .step .t{font-size:12px;overflow-wrap:anywhere;hyphens:auto}
+}
+.day-grid{display:grid;gap:40px}
+@media(min-width:1040px){.day-grid{grid-template-columns:1fr 360px;align-items:start}}
+.day-head{margin-bottom:26px}
+.day-head h3{font-size:clamp(28px,3vw,40px)}
+.day-head p{color:#C3CEE0;margin-top:10px;max-width:60ch}
+.timeline{display:grid;gap:10px}
+.slot{display:grid;grid-template-columns:100px 1fr;gap:18px;animation:rise .4s both}
+@media(max-width:640px){.slot{grid-template-columns:1fr;gap:6px}}
+.slot .time{font-variant-numeric:tabular-nums;color:#8FA0B8;font-size:14px;padding-top:20px;line-height:1.3}
+.slot .time b{display:block;color:#fff;font-size:17px;font-weight:800}
+@media(max-width:640px){.slot .time{padding-top:0;display:flex;gap:6px;align-items:baseline}.slot .time b{display:inline}}
+.slot .box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:18px 22px}
+.slot.key .box{background:linear-gradient(135deg,rgba(58,134,255,.28),rgba(58,134,255,.08));border-color:rgba(58,134,255,.6)}
+.slot .top{display:flex;justify-content:space-between;gap:12px;align-items:start;flex-wrap:wrap}
+.slot h4{font-size:18px;font-weight:800}
+.slot p{color:#C3CEE0;margin-top:4px;font-size:15.5px}
+.tag{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.1);color:#DCE5F3;white-space:nowrap}
+.slot.key .tag{background:var(--blue);color:#fff}
+.ticks{margin-top:14px;display:grid;gap:10px}
+.ticks div{display:flex;gap:12px;align-items:center;font-weight:700;font-size:15.5px}
+.ticks i{width:26px;height:26px;border-radius:50%;background:rgba(58,134,255,.25);color:var(--sky);display:grid;place-items:center;font-style:normal;font-weight:900;font-size:13px;flex:none}
+.side{position:sticky;top:96px;display:none}
+@media(min-width:1040px){.side{display:block}}
+.side .ph{position:relative;border-radius:26px;overflow:hidden;aspect-ratio:4/5}
+.side .ph img{width:100%;height:100%;object-fit:cover}
+.side .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,26,54,.95))}
+.side .ph div{position:absolute;left:24px;right:24px;bottom:22px;z-index:2}
+.side .ph div h3{font-size:24px}
+.side .ph div p{color:#C3CEE0;font-size:15px;margin-top:6px}
+.every{margin-top:12px;display:grid;gap:10px}
+.every div{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 16px;font-size:14.5px;color:#C3CEE0}
+.every div i{font-style:normal;font-size:18px;width:40px;height:40px;border-radius:12px;background:var(--blue);display:grid;place-items:center;flex:none}
+.every b{display:block;color:#fff;font-size:15px}
+.every.mobile{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));margin-top:24px}
+@media(min-width:1040px){.every.mobile{display:none}}
+
+/* ---------- Testimonial ---------- */
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:56px}}
+.media{position:relative}
+.media img.main{border-radius:26px;aspect-ratio:4/5;object-fit:cover;width:100%;object-position:50% 20%}
+.media .float{position:absolute;bottom:-34px;right:-26px;width:46%;border-radius:20px;border:6px solid #fff;aspect-ratio:1;object-fit:cover;box-shadow:0 30px 60px -20px rgba(0,0,0,.45)}
+.media .tag2{position:absolute;top:24px;left:-22px;background:#fff;border-radius:16px;padding:14px 18px;font-weight:800;box-shadow:0 20px 40px -18px rgba(0,0,0,.4);color:var(--ink);font-size:14px}
+.media .tag2 b{display:block;color:var(--blue);font-family:var(--display);font-stretch:120%;font-weight:900;font-size:26px;line-height:1.1;letter-spacing:-.02em}
+@media(max-width:900px){.media .float{right:-6px;width:42%}.media .tag2{left:8px}}
+.stars{display:flex;gap:4px;color:#F5B700;margin-bottom:18px}
+.stars svg{width:24px;height:24px}
+blockquote.big-q{position:relative;font-size:clamp(20px,2vw,25px);line-height:1.45;font-weight:500;margin-top:24px;padding-left:28px;border-left:4px solid var(--blue)}
+.cite{margin-top:20px;padding-left:32px;font-weight:800}
+.cite span{display:block;color:var(--muted);font-weight:600;font-size:15px}
+
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:90px}
+@media(max-width:900px){.tiles{grid-template-columns:1fr 1fr}}
+.tile{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:2/3;color:#fff;display:flex;align-items:flex-end;padding:22px;text-align:left}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.tile:hover img{transform:scale(1.05)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(10,26,54,.94))}
+.tile>div{position:relative;z-index:2}
+.tile .ic{width:46px;height:46px;border-radius:14px;background:var(--blue);display:grid;place-items:center;margin-bottom:14px}
+.tile .ic svg{width:18px;height:18px;fill:#fff;margin-left:2px}
+.tile h3{font-size:clamp(17px,1.6vw,22px)}
+.tile p{color:#D5DFEE;margin-top:6px;font-size:14px}
+.tile .soon{position:absolute;top:14px;left:14px;z-index:2;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(6px);padding:5px 10px;border-radius:999px}
+@media(max-width:900px){.tile{padding:16px}.tile .ic{width:36px;height:36px}.tile p{font-size:12.5px}}
+
+/* ---------- Coach ---------- */
+.coach{position:relative;border-radius:28px;overflow:hidden;min-height:640px;color:#fff;display:flex;align-items:flex-end;padding:clamp(24px,4vw,48px)}
+.coach>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.coach::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(10,26,54,.96)),linear-gradient(90deg,rgba(10,26,54,.6),transparent 60%)}
+.coach>div{position:relative;z-index:2;max-width:640px}
+.coach .role{color:var(--sky);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;margin:12px 0 14px}
+.coach p{color:#D5DFEE}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.facts span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:7px 13px;border-radius:999px;font-size:13px;font-weight:700}
+
+/* ---------- Bleed CTA ---------- */
+.bleed{position:relative;color:#fff;padding:150px 0;overflow:hidden}
+.bleed .bg{position:absolute;inset:0;background:url(assets/dribble.jpg) 75% 30%/cover}
+.bleed::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,26,54,.96) 0%,rgba(10,26,54,.7) 55%,rgba(10,26,54,.25))}
+.bleed .wrap{position:relative;z-index:2;display:grid;gap:40px;align-items:center}
+@media(min-width:1000px){.bleed .wrap{grid-template-columns:1fr auto}}
+.bleed p{color:#DCE5F3;font-size:20px;max-width:500px;margin:20px 0 32px}
+.dm{margin-top:24px;font-weight:700;color:#C3CEE0}
+.dm b{color:#fff;background:var(--blue);padding:4px 10px;border-radius:8px;letter-spacing:.04em}
+.meter2{margin-top:26px;max-width:420px;font-weight:700;color:#C3CEE0;font-size:15px}
+.meter2 .track{height:8px;border-radius:8px;background:rgba(255,255,255,.15);overflow:hidden;margin-top:8px}
+.meter2 .fill{height:100%;background:var(--blue)}
+.qr-card{background:#fff;color:var(--ink);border-radius:24px;padding:22px;display:grid;gap:10px;justify-items:center;text-align:center;width:230px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.qr-card .qr{width:180px;height:180px;display:grid;place-items:center}
+.qr-card .qr img,.qr-card .qr canvas{width:180px!important;height:180px!important}
+.qr-card b{font-size:15px;line-height:1.3}
+.qr-card span{font-size:13px;color:var(--muted)}
+@media (hover:none) and (pointer:coarse){.qr-card{display:none}}
+@media(max-width:999px){.qr-card{display:none}}
+
+/* ---------- Footer ---------- */
+footer{background:var(--deep);color:#7F8CA3;padding:30px 0 120px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+footer img{height:22px;width:auto;opacity:.9}
+footer a{color:#fff;font-weight:700}
+@media(min-width:900px){footer{padding-bottom:30px}}
+
+/* ---------- Mobile dock ---------- */
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;display:flex;gap:8px;padding:8px;border-radius:999px;background:rgba(10,26,54,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);box-shadow:0 20px 40px -10px rgba(0,0,0,.45);transform:translateY(150%);transition:transform .35s cubic-bezier(.2,.9,.3,1)}
+.dock.show{transform:none}
+.dock .btn{height:52px;flex:1;font-size:15px;padding:0 14px;box-shadow:none}
+.dock .icon{flex:0 0 52px;height:52px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;display:grid;place-items:center}
+.dock .icon svg{width:20px;height:20px}
+@media(min-width:900px){.dock{display:none}}
+
+/* ---------- Dialogs ---------- */
+dialog{border:0;padding:0;background:transparent;color:var(--ink);max-width:none;max-height:none}
+dialog::backdrop{background:rgba(6,17,42,.7);backdrop-filter:blur(4px)}
+.sheet{width:min(560px,100vw);background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.55)}
+dialog[open] .sheet{animation:sheetIn .3s cubic-bezier(.2,.9,.3,1)}
+@keyframes sheetIn{from{opacity:0;transform:translateY(24px)}}
+@media(max-width:640px){
+  dialog.bottom{margin:auto 0 0;width:100vw}
+  dialog.bottom .sheet{border-radius:24px 24px 0 0;width:100vw;padding-bottom:env(safe-area-inset-bottom);max-height:92vh;overflow:auto}
+}
+.sheet-hero{position:relative;background:var(--navy) url(https://files.leadconnectorhq.com/file/6afe779a306ac23751f16795/texture-1.jpg) center/cover;color:#fff;padding:26px 28px 24px}
+.sheet-hero .k{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--sky)}
+.sheet-hero .big{font-size:clamp(34px,7vw,48px);margin-top:8px;line-height:.95}
+.x{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;display:grid;place-items:center}
+.x svg{width:16px;height:16px}
+.sheet-body{padding:24px 28px 28px;display:grid;gap:20px}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kv div{background:var(--paper);border-radius:14px;padding:12px 14px}
+.kv .k{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.kv .v{font-weight:700;font-size:15.5px}
+.sub-h{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.mini{display:grid;gap:8px}
+.mini .row{display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:10px 14px}
+.mini .row b{width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-family:var(--display);font-stretch:120%;font-weight:900;font-size:13px;flex:none}
+.mini .row span{font-weight:700}
+.mini .row small{display:block;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.price{display:flex;gap:16px;align-items:center;background:var(--tint);border-radius:16px;padding:16px 18px;font-weight:600}
+.price b{font-family:var(--display);font-stretch:120%;font-weight:900;font-size:34px;color:var(--blue);line-height:1;letter-spacing:-.03em}
+.sheet-actions{display:grid;gap:10px}
+.sheet-actions .btn{width:100%}
+.text-sheet .sheet-body{justify-items:center;text-align:center}
+.text-sheet .qr{border:1.5px solid var(--line);border-radius:18px;padding:12px;width:228px;height:228px;display:grid;place-items:center}
+.text-sheet .qr img,.text-sheet .qr canvas{width:200px!important;height:200px!important}
+.num{font-family:var(--display);font-stretch:120%;font-weight:900;font-size:36px;letter-spacing:-.02em;line-height:1}
+.msg{width:100%;text-align:left;background:var(--blue);color:#fff;border-radius:20px 20px 6px 20px;padding:14px 18px;font-size:15px}
+.msg small{display:block;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-bottom:4px}
+.row-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}
+.row-btns .btn{height:50px;font-size:14px;padding:0 14px}
+.toast{position:fixed;left:50%;bottom:100px;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-weight:700;font-size:14px;z-index:100;transition:.3s;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- ================= OFFER BAR ================= -->
+<div class="offer" role="region" aria-label="Launch offer">
+  <div class="wrap">
+    <span class="pill">Limited</span>
+    <span>First <b data-bind="spots">100</b> sign-ups get <b><span data-bind="discount">$100</span> off</b></span>
+    <span class="meter" data-offer-meter><span class="track"><span class="fill" data-bind="fill"></span></span><span data-bind="left"></span></span>
+    <a href="#" data-text>Text Cassels →</a>
+  </div>
+</div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="bar">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="#HoopStudy home"><img src="assets/logo-white.png" alt="#HoopStudy"></a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#dates">Dates</a>
+        <a href="#week">The Week</a>
+        <a href="#proof">Testimonials</a>
+        <a href="#coach">DJ</a>
+      </nav>
+      <a class="btn" href="#" data-text>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12Z"/></svg>
+        Text Cassels
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="kick" style="color:var(--sky)">#HoopStudy Summer Camps</div>
+      <h1 data-bind="headline">Run the show.</h1>
+      <p class="sub" data-bind="pitch"></p>
+      <div class="switch" role="tablist" aria-label="Choose a camp">
+        <button role="tab" data-camp="pg">Point Guard<small>Grades 6–12</small></button>
+        <button role="tab" data-camp="elite">Elite<small>High school</small></button>
+        <button role="tab" data-camp="girls">Girls<small>Grades 4–12</small></button>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="#" data-text>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12Z"/></svg>
+          Text Cassels · Save $100
+        </a>
+        <a class="btn line" href="#dates">See dates</a>
+      </div>
+    </div>
+    <div>
+      <div class="vsl" id="vsl">
+        <img src="assets/dj-player.jpg" alt="DJ Sackmann with a camper" fetchpriority="high">
+        <button class="play" aria-label="Play video"><span class="play-dot"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span></button>
+        <div class="cap"><span><b>Watch first</b>Why HoopStudy camps are different</span><span>Sound on</span></div>
+      </div>
+      <div class="chips">
+        <span data-bind="days"></span><span data-bind="hours"></span><span>Montclair, NJ</span><span>w/ DJ Sackmann</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marq" aria-hidden="true"><div class="track" id="marq"></div></div>
+
+<!-- ================= DATES ================= -->
+<section id="dates">
+  <div class="wrap">
+    <div class="head split">
+      <div>
+        <div class="kick">Step 1 · Pick your week</div>
+        <h2>Summer<br><span class="blue" data-bind="campshort">Point Guard</span> dates.</h2>
+      </div>
+      <p class="short">Tap a week to see who it's for and the 4-day game plan — then lock it in with one text.</p>
+    </div>
+    <div class="dates" id="dates-list"></div>
+    <div class="note"><i>i</i>Grouped by age and level every day. Not sure which week fits? Text Cassels and she'll place your athlete.</div>
+  </div>
+</section>
+
+<!-- ================= STAT BAND ================= -->
+<div class="band">
+  <div class="wrap">
+    <div><div class="n">100K<em>+</em></div><p>Players trained worldwide</p></div>
+    <div><div class="n">20<em>+</em></div><p>Years developing players</p></div>
+    <div><div class="n">NBA<em>/</em>WNBA</div><p>Skills coach to the pros</p></div>
+    <div><div class="n">4<em>.</em></div><p>Days that change a summer</p></div>
+  </div>
+</div>
+
+<!-- ================= WEEK ================= -->
+<section class="dark" id="week">
+  <div class="wrap">
+    <div class="head split">
+      <div>
+        <div class="kick">Step 2 · See the week</div>
+        <h2>4 days.<br><span class="blue">4 quarters.</span></h2>
+      </div>
+      <p class="short">Every minute is planned. Tap a quarter to see exactly what your athlete does that day.</p>
+    </div>
+
+    <div class="steps" role="tablist" aria-label="Camp days" id="steps"></div>
+
+    <div class="day-grid">
+      <div id="day"></div>
+      <aside class="side">
+        <div class="ph">
+          <img src="assets/dribble.jpg" alt="Camper working a change-of-direction dribble" loading="lazy">
+          <div><h3>Real reps.<br>Every day.</h3><p>No standing in lines. Every block is built around game speed.</p></div>
+        </div>
+        <div class="every">
+          <div><i>🏀</i><span><b>Grouped by age &amp; level</b>Everyone competes at their level.</span></div>
+          <div><i>📋</i><span><b>Daily take-home workout</b>Tonight's reps, on a card.</span></div>
+          <div><i>🎒</i><span><b>Bring</b>Ball, water, lunch/snack, court shoes.</span></div>
+          <div><i>👀</i><span><b>Parents</b>Day 4 showcase is open — come watch.</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="every mobile">
+      <div><i>🏀</i><span><b>Grouped by age &amp; level</b>Everyone competes at their level.</span></div>
+      <div><i>📋</i><span><b>Daily take-home workout</b>Tonight's reps, on a card.</span></div>
+      <div><i>🎒</i><span><b>Bring</b>Ball, water, lunch/snack, court shoes.</span></div>
+      <div><i>👀</i><span><b>Parents</b>Day 4 showcase is open — come watch.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="proof" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="split">
+      <div class="media">
+        <img class="main" src="assets/testimonial-mannix.jpg" alt="DJ Sackmann with a camper after camp" loading="lazy">
+        <img class="float" src="assets/testimonial-crowd.jpg" alt="Campers huddled on the court" loading="lazy">
+        <div class="tag2"><b>★ 5.0</b>Parent review</div>
+      </div>
+      <div>
+        <div class="kick">Step 3 · Elite testimonials</div>
+        <h2>An incredible<br>experience<br><span class="blue">for both of us.</span></h2>
+        <blockquote class="big-q">In just 4 days, I saw a remarkable change in my son's attitude, discipline, and accountability. HoopStudy isn't just building better players. They're building young men with the right mindset, work ethic, and character.</blockquote>
+        <div class="cite">Mannix Fernandez<span>Parent · HoopStudy Camp</span></div>
+      </div>
+    </div>
+
+    <div class="tiles" id="tiles"></div>
+  </div>
+</section>
+
+<!-- ================= COACH ================= -->
+<section id="coach">
+  <div class="wrap">
+    <div class="head split">
+      <div>
+        <div class="kick">Meet your trainer</div>
+        <h2>Trains the pros.<br><span class="blue">Coaches your kid.</span></h2>
+      </div>
+      <p class="short">Every skill gets turned into a game rep — so what your athlete learns at camp shows up in games.</p>
+    </div>
+    <div class="coach">
+      <img src="https://files.leadconnectorhq.com/file/6afe779a306ac23751f1679a/coach-dj-1.jpg" alt="DJ Sackmann" loading="lazy" onerror="this.onerror=null;this.src='assets/dj-player.jpg'">
+      <div>
+        <h3 style="font-size:clamp(34px,4vw,56px);line-height:.95">DJ Sackmann</h3>
+        <div class="role">NBA / WNBA Skills Coach · Head Coach, Lunar Owls BC</div>
+        <p>Known globally as one of the top trainers in the world — working with NBA and WNBA players, overseas pros, and elite high school and middle school athletes for 20 years. His workouts blend skill and game enhancement so the work translates to real in-game efficiency.</p>
+        <div class="facts"><span>20 years</span><span>NBA &amp; WNBA clients</span><span>Unrivaled head coach</span><span>100K+ players trained</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="bleed" id="claim">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <div class="kick" style="color:var(--sky)">Limited offer</div>
+      <h2>$100 off.<br><span class="blue">First 100.</span></h2>
+      <p>Text Cassels the camp and week you want. She'll handle the rest and lock in your discount.</p>
+      <a class="btn" href="#" data-text>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12Z"/></svg>
+        Text Cassels now
+      </a>
+      <div class="dm">Or text Cassels directly at <b data-bind="phone"></b></div>
+      <div class="meter2" data-offer-meter><span data-bind="left2"></span><div class="track"><div class="fill" data-bind="fill2"></div></div></div>
+    </div>
+    <div class="qr-card">
+      <div class="qr" id="qr-final"></div>
+      <b>On a computer?</b>
+      <span>Scan to open a ready-to-send text to Cassels.</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo-white.png" alt="#HoopStudy">
+    <span>Questions? <a href="#" data-text>Text Cassels</a> · © 2026 HoopStudy LLC</span>
+  </div>
+</footer>
+
+<!-- ================= MOBILE DOCK ================= -->
+<div class="dock" id="dock">
+  <a class="btn" href="#" data-text>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12Z"/></svg>
+    Text Cassels <span class="sub">· $100 off</span>
+  </a>
+  <a class="icon" href="#dates" aria-label="Jump to dates"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></a>
+</div>
+
+<!-- ================= DATE SHEET ================= -->
+<dialog class="bottom" id="dateSheet" aria-label="Camp week details">
+  <div class="sheet">
+    <div class="sheet-hero">
+      <button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <div class="k" data-s="kicker"></div>
+      <div class="big" data-s="range"></div>
+    </div>
+    <div class="sheet-body">
+      <div class="kv">
+        <div><div class="k">Days</div><div class="v" data-s="days"></div></div>
+        <div><div class="k">Time</div><div class="v" data-s="hours"></div></div>
+        <div><div class="k">Who</div><div class="v" data-s="grades"></div></div>
+        <div><div class="k">Where</div><div class="v">HoopStudy HQ, Montclair</div></div>
+      </div>
+      <div>
+        <div class="sub-h">The 4-day game plan</div>
+        <div class="mini" data-s="week"></div>
+      </div>
+      <div class="price"><b>$100</b><span>off for the first 100 sign-ups. Text Cassels with this week and it's yours.</span></div>
+      <div class="sheet-actions">
+        <a class="btn" href="#" data-text>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12Z"/></svg>
+          Text Cassels to lock this week
+        </a>
+        <a class="btn ink" href="#week" data-close>See the full day-by-day</a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- ================= TEXT SHEET (computers) ================= -->
+<dialog class="bottom text-sheet" id="textSheet" aria-label="Text Cassels">
+  <div class="sheet">
+    <div class="sheet-hero">
+      <button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <div class="k">Scan with your phone camera</div>
+      <div class="big">Text Cassels</div>
+    </div>
+    <div class="sheet-body">
+      <div class="qr" id="qr-modal"></div>
+      <div class="num" data-bind="phone"></div>
+      <div class="msg"><small>Your message</small><span data-s="msg"></span></div>
+      <div class="row-btns">
+        <button class="btn ink" data-copy="phone">Copy number</button>
+        <button class="btn" data-copy="msg">Copy message</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast">Copied</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+/* =========================================================================
+   EDIT EVERYTHING HERE  ⬇  (no other code needs to change)
+   ========================================================================= */
+const CONFIG = {
+  casselsPhone:   "+19735550100",      // TODO: Cassels' real number (E.164)
+  casselsDisplay: "(973) 555-0100",    // TODO: how it reads on screen
+  offerSpots:     100,
+  offerClaimed:   0,                   // TODO: update as families claim it — the "X left" bar appears once this is above 0
+  discount:       100,
+  vimeo:          { id: "1047891710", hash: "591b65a95a" },
+  days:  "Mon – Thu",
+  hours: "10AM – 2PM",
+};
+
+const CAMPS = {
+  pg: {
+    name: "Point Guard Camp", short: "Point Guard",
+    headline: 'Run the<br><span class="blue">show.</span>',
+    pitch: "4 days learning to lead, read and run a team — the way DJ trains NBA & WNBA guards.",
+    sessions: [ // TODO: confirm real dates / grades
+      { start: "2027-06-21", grades: "Grades 6–8",  status: "open" },
+      { start: "2027-07-12", grades: "Grades 9–12", status: "open" },
+      { start: "2027-08-02", grades: "Grades 6–12", status: "open" },
+    ],
+    week: [
+      { title: "Handle under pressure", focus: "Beat full-court pressure without ever picking up the dribble.",
+        skill: ["Two-ball pound & retreat series", "Re-attack vs. traps and hedges", "Full-court 1v1 pressure breaks"],
+        live: "Press-break 4v4 — guards must initiate against full-court pressure every trip.",
+        iq: "Film: how elite point guards break pressure with their eyes up.",
+        compete: "King of the Court 1v1 — 3-dribble limit." },
+      { title: "Pick-and-roll reads", focus: "Read the low man, the tagger and the big — then make the right play on time.",
+        skill: ["Snake, reject and split reads", "Pocket pass & lob windows", "Hit-ahead to the weak-side corner"],
+        live: "2v2 into 3v3, ball-screen only — every rep is a decision.",
+        iq: "Film: what the defense tells you before the screen arrives.",
+        compete: "3v3 Advantage — every possession starts with a ball screen." },
+      { title: "Tempo & transition", focus: "Play at your speed, not theirs. Change pace to create advantages.",
+        skill: ["Outlet-to-rim in 4 seconds", "Drag screens & early offense", "Change of pace at the elbow"],
+        live: "5v5 with a 12-second shot clock.",
+        iq: "Guest speaker (announced week-of) + controlling tempo like a pro.",
+        compete: "Continuous 3-on-2 / 2-on-1." },
+      { title: "Lead & close", focus: "Late-game execution, communication and owning the huddle.",
+        skill: ["End-of-clock isolation package", "Calling sets & talking on D", "Free throws under fatigue"],
+        live: "Late-game scenarios — down 2, 24 seconds left, your ball.",
+        iq: "Leadership: what great point guards say, and when.",
+        compete: "Camp Championship + awards (parents welcome)." },
+    ],
+  },
+  elite: {
+    name: "Elite Camp", short: "Elite",
+    headline: 'Built for<br><span class="blue">the next level.</span>',
+    pitch: "The higher-level week. Pro-style workouts, real reads and live competition for serious high school players.",
+    sessions: [ // TODO: confirm real dates / grades
+      { start: "2027-06-28", grades: "High school",     status: "open" },
+      { start: "2027-07-19", grades: "High school",     status: "open" },
+      { start: "2027-08-09", grades: "Rising 9th–12th", status: "open" },
+    ],
+    week: [
+      { title: "Footwork & finishing", focus: "Finish through contact with every footwork option in the book.",
+        skill: ["Pro-hop, euro and inside-foot finishes", "Contact finishing with pads", "Jump-stop counters"],
+        live: "1v1 from the wing — 2-dribble limit.",
+        iq: "Film: the footwork behind the league's best finishers.",
+        compete: "Finish-through-contact 2v2." },
+      { title: "Six levels of scoring", focus: "Rim, floater, short mid, mid, three, free throw — own all six.",
+        skill: ["Level-by-level scoring series", "Shot-prep footwork off the catch", "Game-speed shooting from game spots"],
+        live: "3v3 — points only from the level that's called.",
+        iq: "Shot diet: building your scoring profile for summer.",
+        compete: "Shooting ladder competition." },
+      { title: "Reads & counters", focus: "Attack closeouts and beat the first and second defender.",
+        skill: ["Closeout attacks: shoot, drive or pass", "Counters off the first defender", "Off-ball cuts & relocation"],
+        live: "4v4 advantage / disadvantage.",
+        iq: "Guest speaker (announced week-of) + reading help defense.",
+        compete: "Shell drill into live 4v4." },
+      { title: "Pro day", focus: "A real pro workout start to finish — then the showcase.",
+        skill: ["Full NBA/WNBA-style workout", "Conditioning + shooting under fatigue", "1-on-1 evaluation with feedback"],
+        live: "Showcase 5v5 (parents welcome).",
+        iq: "Your summer plan: how to structure workouts after camp.",
+        compete: "All-Camp team + awards." },
+    ],
+  },
+  girls: {
+    name: "Girls Camp", short: "Girls Camp",
+    headline: 'Her game.<br><span class="blue">Next level.</span>',
+    pitch: "A girls-only week from the head coach of Unrivaled's Lunar Owls. Confidence, scoring and IQ — and a lot of fun.",
+    sessions: [ // TODO: confirm real dates / grades
+      { start: "2027-06-14", grades: "Grades 4–8",  status: "open" },
+      { start: "2027-07-26", grades: "Grades 4–8",  status: "open" },
+      { start: "2027-08-16", grades: "Grades 9–12", status: "open" },
+    ],
+    week: [
+      { title: "Confidence with the ball", focus: "Handle with eyes up and attack without hesitation.",
+        skill: ["Ball-handling series, eyes up", "Attacking the gap off the bounce", "Change-of-direction combos"],
+        live: "1v1 and 2v2 — attack-first mindset.",
+        iq: "Talk: confidence is a skill you train.",
+        compete: "Dribble knockout + 1v1 ladder." },
+      { title: "Your scoring package", focus: "Build go-to moves from every spot on the floor.",
+        skill: ["Form shooting into game shots", "Finishing — both hands, both feet", "Pull-up & step-back foundations"],
+        live: "3v3 — call your shot out loud.",
+        iq: "Film: scoring lessons from the best in the women's game.",
+        compete: "3-point & free-throw contest." },
+      { title: "IQ & team basketball", focus: "Spacing, cutting and help defense — how winning teams play.",
+        skill: ["Spacing & cutting rules", "Screening and slipping", "Help-side defense"],
+        live: "5v5 controlled scrimmage.",
+        iq: "Guest speaker (announced week-of).",
+        compete: "3v3 tournament." },
+      { title: "Championship day", focus: "Put it all together and compete for the title.",
+        skill: ["Personal workout you'll keep all summer", "Late-game situations", "Free throws under pressure"],
+        live: "Championship 5v5 (parents welcome).",
+        iq: "Building your summer plan.",
+        compete: "Awards + team photo." },
+    ],
+  },
+};
+
+// Video testimonial tiles — TODO: set `video` to a Vimeo/YouTube embed link to make a tile play.
+const CLIPS = [
+  { title: "Pro players on DJ", sub: "NBA / WNBA clients", img: "assets/dj-coaching.jpg", video: null },
+  { title: "Mannix Fernandez", sub: "Parent · in his own words", img: "assets/testimonial-mannix.jpg", video: null },
+  { title: "Camp recap", sub: "4 days in 60 seconds", img: "assets/testimonial-crowd.jpg", video: null },
+  { title: "Camper interview", sub: "What changed in 4 days", img: "assets/dribble.jpg", video: null },
+];
+
+const MARQUEE = ["Point Guard Camp", "Elite Camp", "Girls Camp", "$100 off · First 100", "Text Cassels", "Montclair, NJ"];
+
+/* =========================================================================
+   APP
+   ========================================================================= */
+const $  = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const isPhone = matchMedia("(hover: none) and (pointer: coarse)").matches;
+const MONTHS = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+const DAYS = ["Mon","Tue","Wed","Thu"];
+const state = { camp: "pg", day: 0, session: null };
+
+function parseDate(iso){ const [y,m,d] = iso.split("-").map(Number); return new Date(y, m-1, d); }
+function rangeOf(iso){
+  const s = parseDate(iso), e = new Date(s); e.setDate(s.getDate() + 3);
+  const same = s.getMonth() === e.getMonth();
+  const short = d => d.toLocaleString("en-US",{month:"short"});
+  return {
+    mon: same ? MONTHS[s.getMonth()] : `${MONTHS[s.getMonth()]} – ${MONTHS[e.getMonth()]}`,
+    days: `${s.getDate()}–${e.getDate()}`,
+    long: same ? `${short(s)} ${s.getDate()}–${e.getDate()}` : `${short(s)} ${s.getDate()} – ${short(e)} ${e.getDate()}`,
+    year: s.getFullYear(),
+  };
+}
+
+/* ---------- Text Cassels ---------- */
+function message(){
+  const c = CAMPS[state.camp];
+  const when = state.session ? ` for the week of ${rangeOf(state.session.start).long}` : "";
+  return `Hi Cassels! I'd like to claim the $${CONFIG.discount} off for HoopStudy ${c.name}${when}. My athlete's name is ___ and they're in grade ___.`;
+}
+const smsHref = () => `sms:${CONFIG.casselsPhone}?&body=${encodeURIComponent(message())}`;
+function renderQR(el, size){
+  if (!el) return;
+  if (typeof QRCode === "undefined") { const card = el.closest(".qr-card"); if (card) card.remove(); else el.textContent = CONFIG.casselsDisplay; return; }
+  el.innerHTML = "";
+  try { new QRCode(el, { text: `SMSTO:${CONFIG.casselsPhone}:${message()}`, width: size, height: size, colorDark: "#0B1B33", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.L }); }
+  catch(e) { el.textContent = CONFIG.casselsDisplay; }
+}
+function updateTextLinks(){
+  $$("[data-text]").forEach(a => a.setAttribute("href", smsHref()));
+  renderQR($("#qr-final"), 180);
+}
+document.addEventListener("click", e => {
+  const a = e.target.closest("[data-text]");
+  if (!a || isPhone) return;            // phones: native sms: link opens Messages, pre-filled
+  e.preventDefault();                   // computers: QR + number + message
+  if ($("#dateSheet").open) $("#dateSheet").close();
+  $("[data-s=msg]", $("#textSheet")).textContent = message();
+  renderQR($("#qr-modal"), 200);
+  $("#textSheet").showModal();
+});
+
+/* ---------- Static binds ---------- */
+function renderStatic(){
+  const left = Math.max(0, CONFIG.offerSpots - CONFIG.offerClaimed);
+  const pct = (CONFIG.offerClaimed / CONFIG.offerSpots) * 100;
+  $$("[data-bind=spots]").forEach(n => n.textContent = CONFIG.offerSpots);
+  $$("[data-bind=discount]").forEach(n => n.textContent = "$" + CONFIG.discount);
+  $$("[data-bind=left]").forEach(n => n.textContent = `${left} left`);
+  $$("[data-bind=left2]").forEach(n => n.textContent = `${left} of ${CONFIG.offerSpots} discounted spots left`);
+  $$("[data-bind=fill],[data-bind=fill2]").forEach(n => n.style.width = pct + "%");
+  if (CONFIG.offerClaimed <= 0) $$("[data-offer-meter]").forEach(n => n.style.display = "none");
+  $$("[data-bind=phone]").forEach(n => n.textContent = CONFIG.casselsDisplay);
+  $$("[data-bind=days]").forEach(n => n.textContent = CONFIG.days);
+  $$("[data-bind=hours]").forEach(n => n.textContent = CONFIG.hours);
+  const seg = MARQUEE.map(t => `${t}<span>//</span>`).join("");
+  $("#marq").innerHTML = `<div class="seg">${seg}</div><div class="seg">${seg}</div>`;
+  $("#tiles").innerHTML = CLIPS.map((c, i) => `
+    <button class="tile" data-clip="${i}" aria-label="${c.title}">
+      <img src="${c.img}" alt="" loading="lazy">
+      ${c.video ? "" : `<span class="soon">Clip coming</span>`}
+      <div><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></div><h3>${c.title}</h3><p>${c.sub}</p></div>
+    </button>`).join("");
+  $$("[data-clip]").forEach(b => b.addEventListener("click", () => {
+    const c = CLIPS[+b.dataset.clip]; if (!c.video) return;
+    b.innerHTML = `<iframe src="${c.video}" allow="autoplay; fullscreen" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3"></iframe>`;
+  }));
+}
+
+/* ---------- Camp switch ---------- */
+function setCamp(id){
+  if (!CAMPS[id]) id = "pg";
+  state.camp = id; state.session = null;
+  const c = CAMPS[id];
+  $$(".switch button").forEach(b => b.setAttribute("aria-selected", b.dataset.camp === id));
+  $("[data-bind=headline]").innerHTML = c.headline;
+  $("[data-bind=pitch]").textContent = c.pitch;
+  $$("[data-bind=campshort]").forEach(n => n.textContent = c.short);
+  renderDates(); renderSteps(); renderDay(); updateTextLinks();
+  const url = new URL(location); url.searchParams.set("camp", id); history.replaceState(null, "", url);
+}
+$$(".switch button").forEach(b => b.addEventListener("click", () => setCamp(b.dataset.camp)));
+
+/* ---------- Dates ---------- */
+const STATUS = { open: "Open", filling: "Filling fast", waitlist: "Waitlist" };
+function renderDates(){
+  const c = CAMPS[state.camp];
+  $("#dates-list").innerHTML = c.sessions.map((s, i) => {
+    const r = rangeOf(s.start);
+    return `<button class="date" data-i="${i}" style="animation-delay:${i*70}ms" aria-label="${c.name}, ${r.long}, ${s.grades}">
+      <span class="stub"><span class="mon">${r.mon}</span><span class="days">${r.days}</span><span class="yr">${r.year}</span></span>
+      <span class="info">
+        <span class="t1">${c.name}</span>
+        <span class="t2">${CONFIG.days} · ${CONFIG.hours}</span>
+        <span class="t2">${s.grades}</span>
+        <span class="foot"><span class="status ${s.status}">${STATUS[s.status] || ""}</span>
+          <span class="go">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+      </span>
+    </button>`;
+  }).join("");
+  $$(".date").forEach(t => t.addEventListener("click", () => openDate(+t.dataset.i)));
+}
+function openDate(i){
+  const c = CAMPS[state.camp], s = c.sessions[i], r = rangeOf(s.start), sh = $("#dateSheet");
+  state.session = s;
+  $("[data-s=kicker]", sh).textContent = c.name;
+  $("[data-s=range]", sh).textContent = r.long;
+  $("[data-s=days]", sh).textContent = CONFIG.days;
+  $("[data-s=hours]", sh).textContent = CONFIG.hours;
+  $("[data-s=grades]", sh).textContent = s.grades;
+  $("[data-s=week]", sh).innerHTML = c.week.map((d, k) =>
+    `<div class="row"><b>Q${k+1}</b><span><small>${["Monday","Tuesday","Wednesday","Thursday"][k]}</small>${d.title}</span></div>`).join("");
+  updateTextLinks();
+  sh.showModal();
+}
+$$("dialog").forEach(d => {
+  d.addEventListener("click", e => { if (e.target === d || e.target.closest("[data-close]")) d.close(); });
+  d.addEventListener("close", () => { if (d.id === "dateSheet" && !$("#textSheet").open) { state.session = null; updateTextLinks(); } });
+});
+
+/* ---------- Week ---------- */
+function renderSteps(){
+  const c = CAMPS[state.camp];
+  $("#steps").innerHTML = c.week.map((d, i) =>
+    `<button class="step" role="tab" aria-selected="${i === state.day}" data-d="${i}">
+       <b>Q${i+1}</b><span class="d">${DAYS[i]}</span><span class="t">${d.title}</span>
+     </button>`).join("");
+  $$(".step").forEach(b => b.addEventListener("click", () => { state.day = +b.dataset.d; renderSteps(); renderDay(); }));
+}
+function renderDay(){
+  const d = CAMPS[state.camp].week[state.day];
+  const slots = [
+    { t: "9:45",  e: "10:00", h: "Check-in & ball-up", p: "Sign in, meet your group, get shots up.", tag: "Arrive" },
+    { t: "10:00", e: "10:30", h: "Activation & warm-up", p: "Dynamic movement, footwork patterns and ball activation. Same routine all week — by Thursday it's theirs to keep.", tag: "Body" },
+    { t: "10:30", e: "11:30", h: `Skill block: ${d.title}`, p: d.focus, drills: d.skill, tag: "Today's focus", key: true },
+    { t: "11:30", e: "12:30", h: "Live play", p: d.live, tag: "Compete" },
+    { t: "12:30", e: "12:40", h: "Refuel", p: "Water, snack, reset.", tag: "Break" },
+    { t: "12:40", e: "1:20",  h: "Film & IQ", p: d.iq, tag: "Learn" },
+    { t: "1:30",  e: "2:00",  h: "Small-sided games", p: d.compete, tag: "Compete", key: state.day === 3 },
+    { t: "2:00",  e: "",      h: "Pickup + take-home card", p: "Every camper leaves with tonight's workout so the reps keep going.", tag: "Home" },
+  ];
+  $("#day").innerHTML = `
+    <div class="day-head">
+      <div class="kick" style="margin-bottom:12px">Quarter ${state.day+1} · ${["Monday","Tuesday","Wednesday","Thursday"][state.day]}</div>
+      <h3>${d.title}</h3>
+      <p>${d.focus}</p>
+    </div>
+    <div class="timeline">${slots.map((s, i) => `
+      <div class="slot ${s.key ? "key" : ""}" style="animation-delay:${i*35}ms">
+        <div class="time"><b>${s.t}</b>${s.e ? "– " + s.e : ""}</div>
+        <div class="box">
+          <div class="top"><h4>${s.h}</h4><span class="tag">${s.tag}</span></div>
+          <p>${s.p}</p>
+          ${s.drills ? `<div class="ticks">${s.drills.map(x => `<div><i>✓</i>${x}</div>`).join("")}</div>` : ""}
+        </div>
+      </div>`).join("")}
+    </div>`;
+}
+
+/* ---------- VSL ---------- */
+$("#vsl .play").addEventListener("click", () => {
+  $("#vsl").innerHTML = `<iframe src="https://player.vimeo.com/video/${CONFIG.vimeo.id}?h=${CONFIG.vimeo.hash}&autoplay=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="HoopStudy camps video"></iframe>`;
+});
+
+/* ---------- Nav + dock on scroll ---------- */
+const hero = $(".hero"), nav = $("#nav"), dock = $("#dock");
+new IntersectionObserver(([e]) => {
+  dock.classList.toggle("show", !e.isIntersecting);
+}).observe(hero);
+const onScroll = () => nav.classList.toggle("solid", scrollY > hero.offsetTop + 40);
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+/* ---------- Copy buttons ---------- */
+$$("[data-copy]").forEach(b => b.addEventListener("click", async () => {
+  const phone = b.dataset.copy === "phone";
+  try { await navigator.clipboard.writeText(phone ? CONFIG.casselsDisplay : message()); } catch(e) {}
+  const t = $("#toast"); t.textContent = phone ? "Number copied" : "Message copied";
+  t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 1600);
+}));
+
+/* ---------- Boot ---------- */
+renderStatic();
+setCamp(new URLSearchParams(location.search).get("camp") || "pg");
+</script>
+</body>
+</html>
